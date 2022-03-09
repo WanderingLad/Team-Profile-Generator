@@ -31,3 +31,5 @@ class Employee
         return this.role;
     }
 }
+
+module.exports = Employee;
