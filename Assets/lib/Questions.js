@@ -5,7 +5,7 @@ const getIntro = function ()
         {
             type: 'list',
             message: "what type of employee do you want to register?",
-            choices: ['Manager', 'Engineer', 'Intern'],
+            choices: ['Manager', 'Engineer', 'Intern', 'No more employees!'],
             name: 'employeeType',
             validate: function (answer)
             {
