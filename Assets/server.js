@@ -5,6 +5,7 @@ const Questions = require('./lib/Questions');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const indexJS = require('./dist/scripts/index')
 
 async function init()
 {
@@ -41,7 +42,7 @@ async function init()
                 default:
                     console.log("That's All folks!");
                     stop = true;
-                    console.log(employees);
+                    indexJS.setArray(employees);
             }
 
             if(ans.employeeType === 'No more employees!')
