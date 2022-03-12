@@ -5,7 +5,7 @@ const Questions = require('./lib/Questions');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const indexJS = require('./dist/scripts/index')
+const HTML = require('./dist/generateHTML');
 
 async function init()
 {
@@ -14,19 +14,16 @@ async function init()
     
     try
     {
+        let man = await inquirer.prompt(Questions.getManager());
+        let manager = new Manager(man.name, man.id, man.email, man.officeNumber);
+        employees = [...employees, manager];
+
         do
         {
             let ans = await inquirer.prompt(Questions.getIntro());
 
             switch(ans.employeeType)
-            {
-                case 'Manager':
-                    let man = await inquirer.prompt(Questions.getManager());
-                    let manager = new Manager(man.name, man.id, man.email, man.officeNumber);
-                    employees = [...employees, manager];
-                    break;
-                
-                
+            {                
                 case "Engineer":
                     let eng = await inquirer.prompt(Questions.getEngineer());
                     let engi = new Engineer(eng.name, eng.id, eng.email, eng.github);
@@ -42,7 +39,6 @@ async function init()
                 default:
                     console.log("That's All folks!");
                     stop = true;
-                    indexJS.setArray(employees);
             }
 
             if(ans.employeeType === 'No more employees!')

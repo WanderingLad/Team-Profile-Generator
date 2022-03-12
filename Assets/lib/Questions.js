@@ -5,7 +5,7 @@ const getIntro = function ()
         {
             type: 'list',
             message: "what type of employee do you want to register?",
-            choices: ['Manager', 'Engineer', 'Intern', 'No more employees!'],
+            choices: ['Engineer', 'Intern', 'No more employees!'],
             name: 'employeeType',
             validate: function (answer)
             {
@@ -48,10 +48,24 @@ const getManager = function ()
 {
     return managerQuestions = 
     [
-        ...getEmployee(),
         {
             type: 'input',
-            message: "What is the employee's office number?",
+            message: "What is the managers's name?",
+            name: 'name',
+        },
+        {
+            type: 'input',
+            message: "What is the manager's id?",
+            name: 'id',
+        },
+        {
+            type: 'input',
+            message: "What is the managers's email?",
+            name: 'email',
+        },
+        {
+            type: 'input',
+            message: "What is the manager's office number?",
             name: 'officeNumber',
         }
     ]
@@ -64,7 +78,7 @@ const getEngineer = function ()
         ...getEmployee(),
         {
             type: 'input',
-            message: "What is the employee's Github username?",
+            message: "What is the engineer's Github username?",
             name: 'github',
         }
     ]
@@ -77,7 +91,7 @@ const getIntern = function ()
         ...getEmployee(),
         {
             type: 'input',
-            message: "What is the employee's school name?",
+            message: "What is the intern's school name?",
             name: 'school',
         }
     ]
