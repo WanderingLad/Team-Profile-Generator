@@ -67,10 +67,11 @@ function createCardMan(emp)
     <li>
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">${emp.name}</h5>
-                <p class="card-text">${emp.role}</p>
-                <a href="mailto:${emp.email}" class="btn btn-primary">${emp.email}</a>
-                <p class="card-text">${emp.officeNumber}</p>
+                <h5 class="card-title">Name: ${emp.name}</h5>
+                <p class="card-text">ID: ${emp.id}</p>
+                <p class="card-text">Role: ${emp.role}</p>
+                <a href="mailto:${emp.email}" class="btn btn-primary">Email: ${emp.email}</a>
+                <p class="card-text">Office Number: ${emp.officeNumber}</p>
             </div>
         </div>
     </li>
@@ -83,10 +84,11 @@ function createCardEng(emp)
     <li>
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">${emp.name}</h5>
-                <p class="card-text">${emp.role}</p>
-                <a href="mailto:${emp.email}" class="btn btn-primary">${emp.email}</a>
-                <a href="github.com/users/${emp.github}" class="btn btn-primary">${emp.github}</a>
+                <h5 class="card-title">Name: ${emp.name}</h5>
+                <p class="card-text">ID: ${emp.id}</p>
+                <p class="card-text">Role: ${emp.role}</p>
+                <a href="mailto:${emp.email}" class="btn btn-primary">Email: ${emp.email}</a>
+                <a href="https://www.github.com/users/${emp.github}" class="btn btn-primary" target="_blank">Github: ${emp.github}</a>
             </div>
         </div>
     </li>
@@ -99,10 +101,11 @@ function createCardInt(emp)
     <li>
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">${emp.name}</h5>
-                <p class="card-text">${emp.role}</p>
-                <a href="mailto:${emp.email}" class="btn btn-primary">${emp.email}</a>
-                <p class="card-text">${emp.school}</p>
+                <h5 class="card-title">Name: ${emp.name}</h5>
+                <p class="card-text">ID: ${emp.id}</p>
+                <p class="card-text">Role: ${emp.role}</p>
+                <a href="mailto:${emp.email}" class="btn btn-primary">Email: ${emp.email}</a>
+                <p class="card-text">School: ${emp.school}</p>
             </div>
         </div>
     </li>

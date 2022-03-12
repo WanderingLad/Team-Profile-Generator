@@ -19,6 +19,11 @@ header
       padding: 1rem;
   }
 
+  a
+  {
+      margin-bottom: 1rem;
+  }
+
   .flex-container 
   {
     flex-wrap: wrap;
