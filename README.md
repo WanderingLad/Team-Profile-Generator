@@ -18,7 +18,7 @@ Once the project is runnable, enter in a initial manager's name and fill out you
 ## Credits
 James Reilly - https://github.com/WanderingLad/
 
-## GIF
+## Walkthrough Video
 ![Alt Text](ReadMeGIF.gif)
   
 ## License
