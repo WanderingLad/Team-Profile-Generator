@@ -37,7 +37,7 @@ function setBody(employeeList)
     <header>
     This is a header
     </header>
-    <ul>
+    <ul class="flex-container">
     `);
     employeeList.forEach(emp => 
         {
@@ -57,7 +57,7 @@ function setBody(employeeList)
         
     stream.write(`
     </ul>
-    <body>
+    </body>
     `);
 }
 
