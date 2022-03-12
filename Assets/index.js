@@ -5,12 +5,14 @@ const Questions = require('./lib/Questions');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const HTML = require('./dist/generateHTML');
+const ht = require('./dist/generateHTML');
 
 async function init()
 {
     let employees = [];
     let stop = false;
+
+    await ht.resetIndex();
     
     try
     {
@@ -39,6 +41,7 @@ async function init()
                 default:
                     console.log("That's All folks!");
                     stop = true;
+                    ht.fileCreation(employees);
             }
 
             if(ans.employeeType === 'No more employees!')

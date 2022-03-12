@@ -1,23 +1,28 @@
-const HTTP = require('http');
+const fs = require('fs');
 
-HTTP.createServer(function (req, res) {
-  var html = buildHtml(req);
+const stream = fs.createWriteStream('./dist/index.html', {flags: 'a'});
 
-  res.writeHead(200, {
-    'Content-Type': 'text/html',
-    'Content-Length': html.length,
-    'Expires': new Date().toUTCString()
-  });
-  res.end(html);
-}).listen(8080);
+const fileCreation = function fileCreation(employees)
+{
+    const emp = employees;
 
-function buildHtml(req) {
-  var header = '';
-  var body = '';
+    const header = setHeader();
 
-  // concatenate header string
-  // concatenate body string
+    stream.write(header);
+}
 
-  return '<!DOCTYPE html>'
-       + '<html><head>' + header + '</head><body>' + body + '</body></html>';
-};
+function setHeader()
+{
+    return `
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Team Page Generator</title>
+    </head>
+    </html>
+    `;
+}
+
+const resetIndex = function(){fs.writeFile('./dist/index.html', '', function (err) {if (err) throw err;})}
+
+module.exports = { fileCreation, resetIndex};
