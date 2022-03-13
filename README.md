@@ -19,7 +19,7 @@ Once the project is runnable, enter in a initial manager's name and fill out you
 James Reilly - https://github.com/WanderingLad/
 
 ## Walkthrough Video
-![Alt Text](ReadMeGIF.gif)
+https://youtu.be/-XorR2NQfi4
   
 ## License
 BSD 2-Clause License
